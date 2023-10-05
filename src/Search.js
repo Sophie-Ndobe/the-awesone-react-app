@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Weather from "./Weather";
+
 import "./Search.css";
 
 export default function Search() {
@@ -33,7 +33,6 @@ export default function Search() {
         <input type="Search" onChange={updateCity} />
         <button className="btn btn-primary mb-1">Search</button>
         <button className="btn btn-success ms-1 mb-1">Current</button>
-        <Weather city={weather.city} />
       </form>
     </div>
   );
