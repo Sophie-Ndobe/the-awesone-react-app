@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import Weather from "./Weather";
 import "./Search.css";
 
 export default function Search() {
@@ -10,12 +10,11 @@ export default function Search() {
   function displayWeather(response) {
     console.log(response);
     setWeather({
-        city: response.data.city,
-        temp: response.data.temperature.current,
-        humidity: response.data.temperature.humidity,
-        wind: response.data.wind.speed,
-    }
-    )
+      city: response.data.city,
+      temp: response.data.temperature.current,
+      humidity: response.data.temperature.humidity,
+      wind: response.data.wind.speed,
+    });
   }
 
   function handleSubmit(event) {
@@ -34,7 +33,7 @@ export default function Search() {
         <input type="Search" onChange={updateCity} />
         <button className="btn btn-primary mb-1">Search</button>
         <button className="btn btn-success ms-1 mb-1">Current</button>
-      <h1>{weather.city}</h1>
+        <Weather city={weather.city} />
       </form>
     </div>
   );
