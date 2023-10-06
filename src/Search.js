@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Weather from "./Weather";
 import "./Search.css";
+import CitiesPanel from "./CitiesPanel";
 
 export default function Search() {
   const [city, setCity] = useState("Tokyo");
@@ -29,6 +30,7 @@ export default function Search() {
   }
   return (
     <div className="Search">
+      <CitiesPanel />
       <form onSubmit={handleSubmit}>
         <input type="Search" onChange={updateCity} />
         <button className="btn btn-primary mb-1">Search</button>

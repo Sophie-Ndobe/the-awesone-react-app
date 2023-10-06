@@ -1,0 +1,7 @@
+.CitiesPanel a {
+  text-decoration: none;
+}
+
+.CitiesPanel a:hover {
+  text-decoration: underline;
+}
