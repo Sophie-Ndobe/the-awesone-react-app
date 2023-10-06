@@ -5,3 +5,15 @@
 .Weather img {
   width: 80px;
 }
+
+.Weather ul {
+  padding: 0px;
+  list-style: none;
+  
+  
+}
+
+.Weather .description {
+  text-transform: capitalize;
+  
+}

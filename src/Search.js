@@ -4,16 +4,16 @@ import Weather from "./Weather";
 import "./Search.css";
 
 export default function Search() {
-  const [city, setCity] = useState(" ");
+  const [city, setCity] = useState("Tokyo");
   const [weather, setWeather] = useState(" ");
 
   function displayWeather(response) {
-    console.log(response);
     setWeather({
       city: response.data.city,
-      temp: response.data.temperature.current,
+      temp: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
+      description: response.data.condition.description,
     });
   }
 
@@ -34,7 +34,13 @@ export default function Search() {
         <button className="btn btn-primary mb-1">Search</button>
         <button className="btn btn-success ms-1 mb-1">Current</button>
       </form>
-      <Weather />
+      <Weather
+        city={weather.city}
+        temp={weather.temp}
+        humidity={weather.humidity}
+        wind={weather.wind}
+        descrip={weather.description}
+      />
     </div>
   );
 }
