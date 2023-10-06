@@ -1,12 +1,15 @@
 import React from "react";
 import "./Weather.css";
+import DateUpdate from "./DateUpdate";
 
 export default function Weather(props) {
   return (
     <div className="Weather">
       <h1>{props.city}</h1>
       <ul>
-        <li>Thursday 19:39</li>
+        <li>
+          <DateUpdate />
+        </li>
         <li className="description">{props.descrip}</li>
       </ul>
       <div className="row">
