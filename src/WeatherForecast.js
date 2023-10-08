@@ -21,8 +21,8 @@ export default function ForecastDate(props) {
   let weatherForecast2 = props.forecast2;
   let weatherForecast3 = props.forecast3;
   let weatherForecast4 = props.forecast4;
-
-  
+ 
+   
 
   let conditions0 = [day0, weatherForecast0];
   let conditions1 = [day1, weatherForecast1];

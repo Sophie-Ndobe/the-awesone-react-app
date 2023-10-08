@@ -1,5 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ReactAnimatedWeather from "react-animated-weather";
 import Search from "./Search";
 
 function App() {

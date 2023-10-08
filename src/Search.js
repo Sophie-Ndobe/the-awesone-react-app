@@ -24,22 +24,22 @@ export default function Search() {
   }
 
   function displayWeatherForecast(response) {
-    console.log(response);
+    console.log(response.data.daily[0].condition.icon);
     setForecast({
       daily0: Math.round(response.data.daily[0].temperature.day),
-      icon0: response.data.daily[0].condition.icon_url,
+      icon0: response.data.daily[0].condition.icon,
       time0: response.data.daily[0].time,
       daily1: Math.round(response.data.daily[1].temperature.day),
-      icon1: response.data.daily[1].condition.icon_url,
+      icon1: response.data.daily[1].condition.icon,
       time1: response.data.daily[1].time,
       daily2: Math.round(response.data.daily[2].temperature.day),
-      icon2: response.data.daily[2].condition.icon_url,
+      icon2: response.data.daily[2].condition.icon,
       time2: response.data.daily[2].time,
       daily3: Math.round(response.data.daily[3].temperature.day),
-      icon3: response.data.daily[3].condition.icon_url,
+      icon3: response.data.daily[3].condition.icon,
       time3: response.data.daily[3].time,
       daily4: Math.round(response.data.daily[4].temperature.day),
-      icon4: response.data.daily[4].condition.icon_url,
+      icon4: response.data.daily[4].condition.icon,
       time4: response.data.daily[4].time,
     });
   }
